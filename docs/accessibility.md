@@ -67,7 +67,7 @@ export function DistanceSlider() {
 
 ## Focus styling
 
-On keyboard focus (`:focus-visible`), the ring is drawn **around the thumb** (via `box-shadow`), not around the whole `<input>`. That’s because a range input’s layout box is only as tall as the track—an `outline` on the input would sit across the middle of the thumb and look like it cuts it off.
+On keyboard focus (`:focus-visible`), the ring is drawn **around the thumb** (via `box-shadow`), not around the whole `<input>`.
 
 The default ring color is **`#4d90fe`**, in the same family as the blue focus indicators Chrome and Edge often use (system blues like `#4d90fe` / `#5E9ED6` are common).
 
