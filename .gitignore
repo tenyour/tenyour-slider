@@ -1,0 +1,30 @@
+node_modules
+dist
+build
+storybook-static
+
+# OS
+.DS_Store
+Thumbs.db
+
+# logs
+*.log
+
+# TypeScript
+*.tsbuildinfo
+
+# env
+.env
+.env.local
+
+# editor
+.vscode
+.idea
+
+# testing
+coverage
+playwright-report
+test-results
+
+# vite
+.vite
