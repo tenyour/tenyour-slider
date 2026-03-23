@@ -1,0 +1,119 @@
+/* Built-in slider presets.
+ * These are CSS-variable-driven so they can be composed via `className`.
+ */
+
+.ty-slider-rounded {
+  --slider-track-radius: 999px;
+  --slider-mark-radius: 999px;
+}
+
+/* Dot-style marks (circular ticks). */
+.ty-slider-dots {
+  --slider-mark-width: 6px;
+  --slider-mark-height: 6px;
+  --slider-mark-radius: 999px;
+}
+
+/* Minimal thin marks. */
+.ty-slider-minimal {
+  --slider-mark-width: 1px;
+  --slider-mark-height: 8px;
+  --slider-mark-radius: 0px;
+}
+
+/* Chunky, prominent ticks. */
+.ty-slider-chunky {
+  --slider-mark-width: 4px;
+  --slider-mark-height: 14px;
+  --slider-mark-radius: 999px;
+}
+
+/* Size presets */
+.ty-slider-sm {
+  --slider-track-height: 4px;
+  --slider-thumb-size: 12px;
+  --slider-mark-height: 6px;
+}
+
+.ty-slider-md {
+  --slider-track-height: 6px;
+  --slider-thumb-size: 18px;
+  --slider-mark-height: 12px;
+}
+
+.ty-slider-lg {
+  --slider-track-height: 10px;
+  --slider-thumb-size: 24px;
+  --slider-mark-height: 16px;
+}
+
+/* Color presets (fill + tick marks). */
+.ty-slider-primary {
+  --slider-fill: #00b37e;
+  --slider-fill-hover: #009966;
+  --slider-tick-color: #00b37e;
+}
+
+.ty-slider-neutral {
+  --slider-fill: #888;
+  --slider-fill-hover: #666;
+  --slider-tick-color: #888;
+}
+
+.ty-slider-danger {
+  --slider-fill: #e5484d;
+  --slider-fill-hover: #c23d42;
+  --slider-tick-color: #e5484d;
+}
+
+.ty-slider-warning {
+  --slider-fill: #f5a524;
+  --slider-fill-hover: #d4881f;
+  --slider-tick-color: #f5a524;
+}
+
+/* Track styles */
+.ty-slider-soft {
+  --slider-track-bg: #e5e5e5;
+}
+
+.ty-slider-contrast {
+  --slider-track-bg: #999;
+}
+
+.ty-slider-invisible-track {
+  --slider-track-bg: transparent;
+}
+
+/* Thumb styles */
+.ty-slider-thumb-flat {
+  --slider-thumb-shadow: none;
+}
+
+.ty-slider-thumb-elevated {
+  --slider-thumb-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+}
+
+.ty-slider-thumb-outline {
+  --slider-thumb-bg: transparent;
+  --slider-thumb-shadow: 0 0 0 2px white;
+}
+
+/* Density / spacing feel */
+.ty-slider-dense {
+  --slider-mark-height: 6px;
+}
+
+.ty-slider-relaxed {
+  --slider-mark-height: 14px;
+}
+
+/* Label presets */
+.ty-slider-labels-muted {
+  --slider-label-color: #777;
+}
+
+.ty-slider-labels-bold {
+  --slider-label-color: white;
+  --slider-label-size: 13px;
+}

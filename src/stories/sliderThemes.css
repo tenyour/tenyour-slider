@@ -1,0 +1,27 @@
+/* Theme used by Storybook stories */
+.mySliderTheme {
+  --slider-fill: #7c3aed;
+  --slider-fill-hover: #6d28d9;
+
+  --slider-track-bg: #374151;
+  --slider-track-hover-bg: #4b5563;
+
+  --slider-thumb-bg: #a78bfa;
+  --slider-thumb-shadow: 0 0 0 4px rgba(124, 58, 237, 0.25);
+
+  --slider-tick-color: #a78bfa;
+  --slider-label-color: #c4b5fd;
+}
+
+.roundedCustomTheme {
+  --slider-track-radius: 999px;
+  --slider-range-ratio: 0.05;
+}
+
+.dotsMarks {
+  --slider-tick-color: #ebf0f3;
+}
+
+.composedMarks {
+  --slider-tick-color: #eab308;
+}
