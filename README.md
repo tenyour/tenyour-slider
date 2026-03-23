@@ -1,18 +1,4 @@
-# tenyour-slider
-
-Accessible, customizable React slider component.
-
-## Installation
-
-```bash
-npm install tenyour-slider
-```
-
-## Usage
-
-Coming soon.
-
-# Slider
+# Tenyour Slider
 
 A controlled, accessible slider built on top of the native `<input type="range">`,
 with marks, labels, snapping, and fully customizable styling via CSS variables.
