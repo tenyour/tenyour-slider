@@ -69,7 +69,7 @@ export function DistanceSlider() {
 
 On keyboard focus (`:focus-visible`), the ring is drawn **around the thumb** (via `box-shadow`), not around the whole `<input>`.
 
-The default ring color is **`#4d90fe`**, in the same family as the blue focus indicators Chrome and Edge often use (system blues like `#4d90fe` / `#5E9ED6` are common).
+The default ring color is **`#4d90fe`**.
 
 To customize the ring color:
 
