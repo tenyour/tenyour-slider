@@ -121,7 +121,8 @@ function Example() {
 <form
   onSubmit={(e) => {
     e.preventDefault();
-    /* read FormData or controlled values */
+    const data = new FormData(e.currentTarget);
+    console.log(data.get("brightness"));
   }}
 >
   <Slider
@@ -134,18 +135,8 @@ function Example() {
 </form>
 ```
 
-Use the `form` attribute on `Slider` if the input lives outside the `<form>` but should still participate in that form’s submit data.
+Use the `form` attribute to associate the slider with a `<form>` by id, even if it is rendered outside the form element.
 
-### Tests: `data-testid` / `data-*`
 
-```tsx
-<Slider
-  data-testid="price-slider"
-  value={price}
-  onChange={setPrice}
-  min={0}
-  max={1000}
-/>
-```
 
 Related docs: [Props](./props.md#native-input-props--ref), [Accessibility](./accessibility.md#labels-recommended)
