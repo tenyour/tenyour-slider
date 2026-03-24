@@ -4,7 +4,7 @@ A controlled, accessible slider built on the native `<input type="range">`
 with marks, labels, snapping, and CSS-variable theming.
 
 <p align="center">
-  <img src="./docs/images/demo.gif" width="700" alt="Slider demo" />
+  <img src="./docs/images/demo.gif" width="500" alt="Slider demo" />
 </p>
 
 ## Features
@@ -77,15 +77,15 @@ See [Styling](./docs/styling.md) for all variables and [Presets](./docs/presets.
 ## Preview
 
 <p align="center">
-  <img src="./docs/images/custom_example.png" width="700" alt="Custom slider" />
+  <img src="./docs/images/custom_example.png" width="500" alt="Custom slider" />
 </p>
 
 <p align="center">
-  <img src="./docs/images/custom_marks_example.png" width="700" alt="Custom marks slider" />
+  <img src="./docs/images/custom_marks_example.png" width="500" alt="Custom marks slider" />
 </p>
 
 <p align="center">
-  <img src="./docs/images/danger-example.png" alt="Styled slider" />
+  <img src="./docs/images/danger-example.png" width="500" alt="Styled slider" />
 </p>
 
 
