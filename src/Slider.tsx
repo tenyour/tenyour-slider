@@ -17,7 +17,7 @@ type NativeInputProps = React.ComponentPropsWithoutRef<"input">;
 
 export interface SliderProps extends Omit<
   NativeInputProps,
-  "value" | "onChange"
+  "value" | "onChange" | "type"
 > {
   value: number;
   onChange?: (value: number) => void;

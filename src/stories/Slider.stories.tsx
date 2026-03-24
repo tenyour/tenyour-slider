@@ -2,8 +2,8 @@ import { useEffect, useState } from "react";
 import type { Meta, StoryObj } from "@storybook/react";
 import Slider from "../Slider";
 
-import "./sliderThemes.css";
 import "../slider.presets.css";
+import "./sliderThemes.css";
 
 const meta = {
   title: "Components/Slider",

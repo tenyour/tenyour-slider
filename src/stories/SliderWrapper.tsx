@@ -1,8 +1,8 @@
 import { useState } from "react";
 import Slider from "../Slider";
 import type { SliderProps } from "../Slider";
-import "./sliderThemes.css";
 import "../slider.presets.css";
+import "./sliderThemes.css";
 
 const storyFrameStyle: React.CSSProperties = {
   width: "100%",

@@ -1,7 +1,11 @@
 # Tenyour Slider
 
-A controlled, accessible slider built on top of the native `<input type="range">`,
-with marks, labels, snapping, and fully customizable styling via CSS variables.
+A controlled, accessible slider built on the native `<input type="range">`
+with marks, labels, snapping, and CSS-variable theming.
+
+<p align="center">
+  <img src="./docs/images/demo.gif" width="700" alt="Slider demo" />
+</p>
 
 ## Features
 
@@ -20,17 +24,6 @@ npm install tenyour-slider
 # or
 yarn add tenyour-slider
 ```
-
-## Run Storybook locally
-
-Use Storybook to preview presets, marks/labels behavior, and theming examples on your machine.
-
-```bash
-npm install
-npm run storybook
-```
-
-Then open [http://localhost:6006](http://localhost:6006).
 
 ## Basic example
 
@@ -54,7 +47,7 @@ export function Example() {
 }
 ```
 
-> **Note:** Slider is a controlled component.  
+> ⚠️ **Note:** Slider is a controlled component.  
 > You must update `value` in `onChange` for the thumb to move.
 
 ## Custom styling
@@ -81,6 +74,21 @@ Styling is done via CSS variables applied through `className`.
 
 See [Styling](./docs/styling.md) for all variables and [Presets](./docs/presets.md) for built-in classes.
 
+## Preview
+
+<p align="center">
+  <img src="./docs/images/custom_example.png" width="700" alt="Custom slider" />
+</p>
+
+<p align="center">
+  <img src="./docs/images/custom_marks_example.png" width="700" alt="Custom marks slider" />
+</p>
+
+<p align="center">
+  <img src="./docs/images/danger-example.png" alt="Styled slider" />
+</p>
+
+
 ## Why Slider?
 
 The native `<input type="range">` is difficult to style consistently and does not support marks or labels.
@@ -102,33 +110,20 @@ Slider keeps the accessibility and performance of the native input, while adding
 - [Presets](./docs/presets.md)
 - [Examples](./docs/examples.md)
 
-## Quick visuals
+## Development
 
-Danger (red) preset:
+Contributions are welcome! Please open an issue to discuss major changes first.
 
-```tsx
-<Slider
-  value={75}
-  onChange={(v) => console.log(v)}
-  min={0}
-  max={100}
-  marks={10}
-  markMode="always"
-  className="ty-slider-rounded ty-slider-md ty-slider-danger ty-slider-contrast ty-slider-thumb-outline ty-slider-relaxed"
-/>
+To get started locally:
+
+```bash
+git clone https://github.com/tenyour/tenyour-slider.git
+cd tenyour-slider
+npm install
+npm run storybook
 ```
 
-Cleaner look (hide edge marks):
+Storybook runs at [http://localhost:6006](http://localhost:6006). Use it to preview presets, marks/labels behavior, and theming examples.
 
-```tsx
-<Slider
-  value={30}
-  onChange={(v) => console.log(v)}
-  min={0}
-  max={100}
-  marks={10}
-  showEdgeMarks={false}
-  markMode="always"
-  className="ty-slider-rounded ty-slider-dots ty-slider-lg ty-slider-primary ty-slider-soft ty-slider-thumb-elevated ty-slider-relaxed"
-/>
-```
+See [CONTRIBUTING.md](./CONTRIBUTING.md) for more details.
+

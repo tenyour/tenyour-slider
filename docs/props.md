@@ -1,14 +1,67 @@
 # Props
 
+## Overview
+
+`Slider` accepts:
+
+- All custom `SliderProps` documented below
+- All native `<input type="range">` props (except `value` and `onChange`, which are replaced by Slider's controlled API)
+- A forwarded `ref` to the underlying `<input>`
+
+> This is a controlled component. If `onChange` is not provided, the slider is read-only.
+
+```tsx
+const [value, setValue] = useState(50)
+
+<Slider value={value} onChange={setValue} />
+```
+
+### Custom `SliderProps` (complete list)
+
+
+| Prop            | Type                                                 | Default      | Notes                                                                                            |
+| --------------- | ---------------------------------------------------- | ------------ | ------------------------------------------------------------------------------------------------ |
+| `value`         | `number`                                             | *(required)* | Controlled value. Clamped to `min`/`max` internally for rendering.                               |
+| `onChange`      | `(value: number) => void`                            | `undefined`  | Called with the numeric value when user interaction changes it. If omitted, slider is read-only. |
+| `min`           | `number`                                             | `1`          | Minimum slider value.                                                                            |
+| `max`           | `number`                                             | `10`         | Maximum slider value.                                                                            |
+| `step`          | `number`                                             | `1`          | Step size between values.                                                                        |
+| `marks`         | `false | number | number[] | Record<number, string>` | `1`          | Mark configuration.                                                                              |
+| `showEdgeMarks` | `boolean`                                            | `true`       | Show `min` and `max` marks/labels.                                                               |
+| `snapToMarks`   | `boolean`                                            | `false`      | Snap to nearest mark while interacting.                                                          |
+| `markMode`      | `"auto" | "always"`                                  | `"auto"`     | When marks are visible.                                                                          |
+| `markLabelMode` | `"none" | "auto" | "always"`                         | `"none"`     | When mark labels are visible.                                                                    |
+| `showValue`     | `boolean`                                            | `undefined`  | `true`: always show, `false`: always hide, `undefined`: show after first movement.               |
+| `units`         | `string`                                             | `""`         | Unit suffix and aria formatting hint.                                                            |
+| `className`     | `string`                                             | `undefined`  | Applied to the outer slider wrapper (not the `<input>`).                                         |
+
+
+### Native `<input>` props often used with Slider
+
+Because `SliderProps` extends native input props, all standard input attributes (besides overridden `value`/`onChange`) are supported. Common ones:
+
+
+| Prop                                 | Default in Slider           | Notes                                            |
+| ------------------------------------ | --------------------------- | ------------------------------------------------ |
+| `disabled`                           | `false`                     | Also disables drag state behavior and styles.    |
+| `id`                                 | `undefined`                 | Useful for `<label htmlFor>`.                    |
+| `name`                               | `undefined`                 | Useful for forms.                                |
+| `form`                               | `undefined`                 | Associate with a specific form.                  |
+| `autoFocus`                          | `undefined`                 | Native autofocus behavior.                       |
+| `tabIndex`                           | `undefined`                 | Keyboard focus order.                            |
+| `aria-valuetext`                     | auto-generated when omitted | If provided, your value is used as-is.           |
+| `data-`* / `aria-*` / `style` / etc. | native defaults             | Passed through to the `<input>` via `{...rest}`. |
+
+
 ## Native `<input>` props & `ref`
 
-`Slider` is implemented with `React.forwardRef`. The **`ref` is attached to the underlying `<input type="range">`**, so you can focus it, measure it, or use it with form libraries that expect a real input.
+`Slider` is implemented with `React.forwardRef`. The `**ref` is attached to the underlying `<input type="range">**`, so you can focus it, measure it, or use it with form libraries that expect a real input.
 
-`SliderProps` extends the native range input’s attribute types (with `value` / `onChange` replaced by Slider’s controlled API). Any other standard prop is passed through to the `<input>` via **`{...rest}`** (spread **after** Slider’s own attributes).
+`SliderProps` extends the native range input’s attribute types (with `value` / `onChange` replaced by Slider’s controlled API). All other native props are forwarded to the underlying `<input>` via `{...rest}` (spread **after** Slider’s own attributes).
 
 **Handy examples:** `id` (pair with `<label htmlFor>`), `name` / `form` (forms), `autoFocus`, `tabIndex`, `data-*` / `data-testid`, extra `aria-*` beyond what Slider sets, `style` on the input, etc.
 
-**Avoid overriding** `type` (must stay `range`) and the pointer handlers **`onPointerDown` / `onPointerUp` / `onPointerCancel`** unless you compose them yourself—Slider uses those for drag state and mark visibility.
+Pointer event handlers (`onPointerDown`, `onPointerUp`, `onPointerCancel`) are used internally for drag behavior. If you provide your own handlers, they are composed with Slider’s internal logic.
 
 **Note:** `className` applies to the **outer wrapper**, not the `<input>`, so presets and layout theming work on the whole control. Use CSS variables or a wrapper element if you need to target visuals.
 
@@ -19,7 +72,7 @@ See [Examples](./examples.md#native-input-props--ref) for code snippets.
 Type: `false | number | number[] | Record<number, string>`
 
 - `false` → no marks
-- `number` → marks every N steps
+- `number` → marks every N *steps* (i.e. N × `step`)
 - `number[]` → marks at exact values
 - `Record<number, string>` → custom value → label mapping
 
@@ -27,7 +80,7 @@ Type: `false | number | number[] | Record<number, string>`
 
 ### `showEdgeMarks`
 
-Optional. **If you omit it, edge marks at `min` and `max` are shown** (same as `true`). Pass **`false`** only when you want to hide those two marks for a cleaner look (internally `marks.slice(1, -1)`).
+Optional. **If you omit it, edge marks at `min` and `max` are shown** (same as `true`). Pass `**false`** only when you want to hide those two marks for a cleaner look (internally `marks.slice(1, -1)`).
 
 ## Mark visibility
 
