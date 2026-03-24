@@ -55,7 +55,7 @@ Because `SliderProps` extends native input props, all standard input attributes 
 
 ## Native `<input>` props & `ref`
 
-`Slider` is implemented with `React.forwardRef`. The `**ref` is attached to the underlying `<input type="range">**`, so you can focus it, measure it, or use it with form libraries that expect a real input.
+`Slider` is implemented with `React.forwardRef`. The **`ref`** is attached to the underlying `<input type="range">`, so you can focus it, measure it, or use it with form libraries that expect a real input.
 
 `SliderProps` extends the native range input’s attribute types (with `value` / `onChange` replaced by Slider’s controlled API). All other native props are forwarded to the underlying `<input>` via `{...rest}` (spread **after** Slider’s own attributes).
 
@@ -69,6 +69,8 @@ See [Examples](./examples.md#native-input-props--ref) for code snippets.
 
 ## `marks`
 
+See [Marks & Labels](./marks.md) for usage patterns and examples.
+
 Type: `false | number | number[] | Record<number, string>`
 
 - `false` → no marks
@@ -80,7 +82,7 @@ Type: `false | number | number[] | Record<number, string>`
 
 ### `showEdgeMarks`
 
-Optional. **If you omit it, edge marks at `min` and `max` are shown** (same as `true`). Pass `**false`** only when you want to hide those two marks for a cleaner look (internally `marks.slice(1, -1)`).
+Optional. **If you omit it, edge marks at `min` and `max` are shown** (same as `true`). Pass **`false`** only when you want to hide those two marks for a cleaner look.
 
 ## Mark visibility
 
