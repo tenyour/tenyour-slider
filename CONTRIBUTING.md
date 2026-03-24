@@ -19,7 +19,6 @@ Storybook runs at [http://localhost:6006](http://localhost:6006).
 Other useful commands:
 
 - `npm run build` — produce the library bundle (and surface compile errors)
-- `npm test` — run the test suite
 - `npm run build-storybook` — static Storybook build (CI-style check)
 
 ## How to propose changes
@@ -28,7 +27,7 @@ Other useful commands:
 2. **Fork the repo** and create a branch from `main` (or the default branch).
 3. **Make focused changes** with a clear scope; prefer several small PRs over one huge one.
 4. **Add or update Storybook stories** when you change behavior, props, or visuals that users would notice.
-5. **Run `npm run build`** (and `npm test` when tests apply) before opening a PR.
+5. **Run `npm run build`** before opening a PR.
 6. **Open a pull request** with a short description of what changed and why. Link related issues when applicable.
 
 ## Coding conventions
