@@ -29,21 +29,29 @@ const sliderWrapperStyle: React.CSSProperties = {
   justifyContent: "center",
 };
 
+const lightSliderWrapperStyle: React.CSSProperties = {
+  ...sliderWrapperStyle,
+  backgroundColor: "#f8fafc",
+  color: "#0f172a",
+};
+
 export function SliderWrapper({
   args,
   width = 320,
   className,
+  tone = "dark",
 }: {
   args: SliderProps;
   width?: number;
   className?: string;
+  tone?: "dark" | "light";
 }) {
   const [value, setValue] = useState(args.value ?? 5);
   const mergedClassName = [args.className, className].filter(Boolean).join(" ");
 
   return (
     <div style={storyFrameStyle}>
-      <div style={sliderWrapperStyle}>
+      <div style={tone === "light" ? lightSliderWrapperStyle : sliderWrapperStyle}>
         <div style={{ width }}>
           <Slider
             {...args}

@@ -41,7 +41,7 @@ See [CSS variables reference](./css-variables.md) for all available options.
 Use built-in preset classes for common styles.
 
 ```tsx
-<Slider className="ty-slider-rounded ty-slider-primary ty-slider-lg" />
+<Slider className="ty-slider-rounded ty-slider-indigo ty-slider-lg" />
 ```
 
 See [Presets](./presets.md) for available options.

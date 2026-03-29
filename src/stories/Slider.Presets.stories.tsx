@@ -21,18 +21,18 @@ export const PresetRounded: Story = {
     markLabelMode: "none",
     showEdgeMarks: false,
     units: "%",
-    className: "ty-slider-rounded ty-slider-lg",
+    className: "ty-slider-rounded ty-slider-lg ty-slider-indigo",
   },
   render: (args) => (
     <SliderWrapper
       args={args}
       width={520}
-      className="ty-slider-rounded ty-slider-lg"
+      className="ty-slider-rounded ty-slider-lg ty-slider-indigo"
     />
   ),
 };
 
-export const PresetDots: Story = {
+export const PresetModernOcean: Story = {
   args: {
     min: 0,
     max: 100,
@@ -42,18 +42,18 @@ export const PresetDots: Story = {
     markMode: "always",
     markLabelMode: "none",
     units: "%",
-    className: "ty-slider-dots dotsMarks",
+    className: "ty-slider-modern ty-slider-md ty-slider-ocean",
   },
   render: (args) => (
     <SliderWrapper
       args={args}
       width={520}
-      className="ty-slider-dots dotsMarks"
+      className="ty-slider-modern ty-slider-md ty-slider-ocean"
     />
   ),
 };
 
-export const PresetComposed: Story = {
+export const PresetPillSunset: Story = {
   args: {
     min: 0,
     max: 100,
@@ -63,18 +63,18 @@ export const PresetComposed: Story = {
     markMode: "always",
     markLabelMode: "none",
     units: "%",
-    className: "ty-slider-rounded ty-slider-chunky .composedMarks",
+    className: "ty-slider-pill ty-slider-lg ty-slider-sunset",
   },
   render: (args) => (
     <SliderWrapper
       args={args}
       width={520}
-      className="ty-slider-rounded ty-slider-chunky composedMarks"
+      className="ty-slider-pill ty-slider-lg ty-slider-sunset"
     />
   ),
 };
 
-export const PresetSizesAndColors: Story = {
+export const PresetSizeScaling: Story = {
   args: {
     min: 0,
     max: 100,
@@ -84,9 +84,9 @@ export const PresetSizesAndColors: Story = {
     markMode: "always",
     markLabelMode: "none",
     units: "%",
-    className: "ty-slider-rounded ty-slider-lg ty-slider-primary",
+    className: "ty-slider-rounded ty-slider-sm ty-slider-mint",
   },
-  render: (args) => <SliderWrapper args={args} width={560} />,
+  render: (args) => <SliderWrapper args={args} width={520} />,
 };
 
 export const PresetThumbOutlineAndLabelsBold: Story = {
@@ -107,7 +107,7 @@ export const PresetThumbOutlineAndLabelsBold: Story = {
     showValue: true,
     units: "",
     className:
-      "ty-slider-minimal ty-slider-neutral ty-slider-thumb-outline ty-slider-labels-bold",
+      "ty-slider-minimal ty-slider-md ty-slider-ocean ty-slider-thumb-outline ty-slider-labels-bold",
   },
   render: (args) => <SliderWrapper args={args} width={520} />,
 };
@@ -124,7 +124,23 @@ export const NumberDangerOutlineBoldLabels: Story = {
     showValue: true,
     units: "%",
     className:
-      "ty-slider-chunky ty-slider-md ty-slider-danger ty-slider-contrast ty-slider-thumb-outline ty-slider-labels-bold ty-slider-relaxed",
+      "ty-slider-chunky ty-slider-md ty-slider-danger ty-slider-contrast ty-slider-thumb-outline ty-slider-labels-bold",
+  },
+  render: (args) => <SliderWrapper args={args} width={560} />,
+};
+
+export const PresetGlassFuturistic: Story = {
+  args: {
+    min: 0,
+    max: 100,
+    step: 1,
+    marks: 10,
+    value: 60,
+    markMode: "always",
+    markLabelMode: "none",
+    units: "%",
+    className:
+      "ty-slider-glass ty-slider-lg ty-slider-ocean ty-slider-thumb-elevated",
   },
   render: (args) => <SliderWrapper args={args} width={560} />,
 };

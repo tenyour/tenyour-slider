@@ -17,11 +17,3 @@
   --slider-track-radius: 999px;
   --slider-range-ratio: 0.05;
 }
-
-.dotsMarks {
-  --slider-tick-color: #ebf0f3;
-}
-
-.composedMarks {
-  --slider-tick-color: #eab308;
-}
