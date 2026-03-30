@@ -1,7 +1,6 @@
 import React from "react";
 import type { NormalizedMark } from "./slider.utils";
 import { valueToPercentage } from "./slider.utils";
-import styles from "./Slider.module.css";
 
 export const SliderMarks = React.memo(function SliderMarks({
   marks,
@@ -19,7 +18,7 @@ export const SliderMarks = React.memo(function SliderMarks({
   const visibleMarks = showEdgeMarks ? marks : marks.slice(1, -1);
 
   return (
-    <div className={styles.marks}>
+    <div className="ty-slider-marks">
       {visibleMarks.map((mark, index) => {
         const percentage = valueToPercentage(mark.value, min, max);
         const delay = (index / visibleMarks.length) * 0.3;
@@ -27,7 +26,7 @@ export const SliderMarks = React.memo(function SliderMarks({
         return (
           <React.Fragment key={mark.value}>
             <div
-              className={styles.mark}
+              className="ty-slider-mark"
               style={
                 {
                   left: `${percentage * 100}%`,
@@ -37,7 +36,7 @@ export const SliderMarks = React.memo(function SliderMarks({
             />
             {markLabelMode !== "none" && (
               <span
-                className={styles.markLabel}
+                className="ty-slider-mark-label"
                 style={
                   {
                     left: `${percentage * 100}%`,

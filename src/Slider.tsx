@@ -1,5 +1,6 @@
 import React, { useState, useRef, useMemo } from "react";
-import styles from "./Slider.module.css";
+import "./slider.css";
+
 import {
   clamp,
   valueToPercentage,
@@ -32,6 +33,9 @@ export interface SliderProps extends Omit<
   showValue?: boolean;
   units?: string;
 }
+
+const cx = (...parts: Array<string | false | null | undefined>) =>
+  parts.filter(Boolean).join(" ");
 
 function mergeRefs<T>(
   ...refs: (React.Ref<T> | undefined)[]
@@ -125,17 +129,17 @@ const Slider = React.forwardRef<HTMLInputElement, SliderProps>(
 
     return (
       <div
-        className={`
-                ${styles.sliderWrapper}
-                ${disabled ? styles.disabled : ""}
-                ${showMarks ? styles.marksVisible : ""}
-                ${showLabels ? styles.markLabelsVisible : ""}
-                ${className ?? ""}
-            `}
+        className={cx(
+          "ty-slider-wrapper",
+          disabled && "ty-slider-disabled",
+          showMarks && "ty-slider-marks-visible",
+          showLabels && "ty-slider-mark-labels-visible",
+          className,
+        )}
       >
-        <div className={styles.track}>
+        <div className="ty-slider-track">
           <div
-            className={styles.fill}
+            className="ty-slider-fill"
             style={{
               width: `${isSingleValue ? 100 : percentage * 100}%`,
             }}
@@ -173,14 +177,12 @@ const Slider = React.forwardRef<HTMLInputElement, SliderProps>(
             if (disabled) return;
             setIsDragging(false);
           }}
-          className={styles.slider}
+          className="ty-slider-input"
           {...rest}
         />
-        <div className={styles.valueLayer}>
+        <div className="ty-slider-value-layer">
           <span
-            className={`${styles.valueDisplay} ${
-              shouldShowValue ? styles.visible : ""
-            }`}
+            className={cx("ty-slider-value-display", shouldShowValue && "ty-slider-visible")}
             style={{ left: `${percentage * 100}%` }}
           >
             {currentMark?.label ?? safeValue}
