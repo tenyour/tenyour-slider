@@ -19,6 +19,8 @@ with marks, labels, snapping, and CSS-variable theming.
 
 ## Installation
 
+Published on npm: [tenyour-slider](https://www.npmjs.com/package/tenyour-slider)
+
 ```bash
 npm install tenyour-slider
 # or

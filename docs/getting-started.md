@@ -2,17 +2,19 @@
 
 ## Installation
 
+Package: [tenyour-slider on npm](https://www.npmjs.com/package/tenyour-slider)
+
 ```bash
-npm install tenyour-react-slider
+npm install tenyour-slider
 # or
-yarn add tenyour-react-slider
+yarn add tenyour-slider
 ```
 
 ## Basic usage
 
 ```tsx
 import { useState } from "react";
-import { Slider } from "tenyour-react-slider";
+import { Slider } from "tenyour-slider";
 
 export function Example() {
   const [value, setValue] = useState(50);
