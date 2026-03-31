@@ -15,7 +15,8 @@ The reference below documents the **public variables** you can use.
 | `--slider-track-bg`       | Track background          | `#d3d3d3`                                                        |
 | `--slider-track-hover-bg` | Track background on hover | `#bfbfbf`                                                        |
 | `--slider-tick-color`     | Mark/tick color           | `#bfbfbf`                                                        |
-| `--slider-label-color`    | Mark/value label color    | `#aaa` (mark labels); value tooltip defaults to `white` if unset |
+| `--slider-value-label-color` | Value tooltip color | `white` |
+| `--slider-mark-label-color` | Mark label color | `#aaa` |
 
 ## Sizing
 
@@ -37,7 +38,11 @@ The reference below documents the **public variables** you can use.
 
 | Variable                   | Description                                                     | Default                                                  |
 | -------------------------- | --------------------------------------------------------------- | -------------------------------------------------------- |
-| `--slider-label-size`      | Label font size                                                 | `11px` (mark labels); value tooltip uses `1rem` if unset |
+| `--slider-value-label-size`| Value tooltip font size                                        | `1rem`                                                   |
+| `--slider-mark-label-size` | Mark label font size                                            | `11px`                                                   |
+| `--slider-value-label-weight` | Value tooltip font weight                                  | `500`                                                    |
+| `--slider-value-label-weight-mobile` | Value tooltip font weight on mobile (`max-width: 767px`) | `300` |
+| `--slider-mark-label-weight` | Mark label font weight                                       | `400`                                                    |
 | `--slider-value-unit-size` | Unit suffix font size inside the value tooltip (e.g. `%`, `cm`) | `12px`                                                   |
 | `--slider-label-offset`    | Offset for mark labels above the track                          | `-18px`                                                  |
 

@@ -26,9 +26,9 @@
   left: 0;
   transform: translateX(-50%);
   margin-top: 0.5rem;
-  font-size: var(--slider-label-size, 1rem);
-  font-weight: 500;
-  color: var(--slider-label-color, white);
+  font-size: var(--slider-value-label-size, 1rem);
+  font-weight: var(--slider-value-label-weight, 500);
+  color: var(--slider-value-label-color, white);
   white-space: nowrap;
   pointer-events: none;
   opacity: 0;
@@ -113,8 +113,9 @@
   position: absolute;
   top: var(--slider-label-offset, -18px);
   transform: translate(-50%, 8px) scale(0.8);
-  font-size: var(--slider-label-size, 11px);
-  color: var(--slider-label-color, #aaa);
+  font-size: var(--slider-mark-label-size, 11px);
+  font-weight: var(--slider-mark-label-weight, 400);
+  color: var(--slider-mark-label-color, #aaa);
   pointer-events: none;
   white-space: nowrap;
   opacity: 0;
@@ -219,7 +220,7 @@
     bottom: auto;
     margin-top: 0.5rem;
     margin-bottom: 0;
-    font-weight: 300;
+    font-weight: var(--slider-value-label-weight-mobile, 300);
   }
 
   .ty-slider-marks {
