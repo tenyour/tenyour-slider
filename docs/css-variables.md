@@ -34,6 +34,15 @@ The reference below documents the **public variables** you can use.
 | ----------------------- | ------------------------------ | ------- |
 | `--slider-track-radius` | Track (and fill) border radius | `0px`   |
 
+## Layering
+
+Use these when you want marks in front of or behind the track.
+
+| Variable                 | Description                    | Default |
+| ------------------------ | ------------------------------ | ------- |
+| `--slider-marks-z-index` | Z-index for marks layer        | `1`     |
+| `--slider-track-z-index` | Z-index for track/fill layer   | `0`     |
+
 ## Labels
 
 | Variable                   | Description                                                     | Default                                                  |

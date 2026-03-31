@@ -65,3 +65,30 @@ export const DiscreteSteps: Story = {
   },
   render: (args) => <SliderWrapper args={args} width={420} />,
 };
+
+/** Default layering: marks render in front of the track. */
+export const MarksInFrontOfTrack: Story = {
+  args: {
+    min: 0,
+    max: 100,
+    step: 1,
+    marks: 10,
+    value: 40,
+    markMode: "always",
+  },
+  render: (args) => <SliderWrapper args={args} width={420} />,
+};
+
+/** Optional layering: marks render behind the track via CSS variables. */
+export const MarksBehindTrack: Story = {
+  args: {
+    min: 0,
+    max: 100,
+    step: 1,
+    marks: 10,
+    value: 40,
+    markMode: "always",
+    className: "marksBehindTrack",
+  },
+  render: (args) => <SliderWrapper args={args} width={420} />,
+};

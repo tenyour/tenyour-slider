@@ -17,3 +17,9 @@
   --slider-track-radius: 999px;
   --slider-range-ratio: 0.05;
 }
+
+/* Layering demo classes */
+.marksBehindTrack {
+  --slider-marks-z-index: 0;
+  --slider-track-z-index: 1;
+}
