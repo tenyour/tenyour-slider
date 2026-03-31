@@ -4,9 +4,10 @@
 
 Slider is styled via CSS variables. You apply them through `className`.
 
-## Important: className behavior
+## Important: className and style behavior
 
 `className` is applied to the outer wrapper, not the `<input>`.
+`style` is also applied to the outer wrapper.
 
 This allows CSS variables to cascade to all internal parts (track, thumb, marks).
 

@@ -34,6 +34,7 @@ const [value, setValue] = useState(50)
 | `showValue`     | `boolean`                                            | `undefined`  | `true`: always show, `false`: always hide, `undefined`: show after first movement.               |
 | `units`         | `string`                                             | `""`         | Unit suffix and aria formatting hint.                                                            |
 | `className`     | `string`                                             | `undefined`  | Applied to the outer slider wrapper (not the `<input>`).                                         |
+| `style`         | `React.CSSProperties`                                | `undefined`  | Applied to the outer slider wrapper. Inline style overrides class-based values when both set the same CSS property. |
 
 
 ### Native `<input>` props often used with Slider
@@ -50,7 +51,7 @@ Because `SliderProps` extends native input props, all standard input attributes 
 | `autoFocus`                          | `undefined`                 | Native autofocus behavior.                       |
 | `tabIndex`                           | `undefined`                 | Keyboard focus order.                            |
 | `aria-valuetext`                     | auto-generated when omitted | If provided, your value is used as-is.           |
-| `data-`* / `aria-*` / `style` / etc. | native defaults             | Passed through to the `<input>` via `{...rest}`. |
+| `data-`* / `aria-*` / etc.           | native defaults             | Passed through to the `<input>` via `{...rest}`. |
 
 
 ## Native `<input>` props & `ref`
@@ -59,11 +60,11 @@ Because `SliderProps` extends native input props, all standard input attributes 
 
 `SliderProps` extends the native range input’s attribute types (with `value` / `onChange` replaced by Slider’s controlled API). All other native props are forwarded to the underlying `<input>` via `{...rest}` (spread **after** Slider’s own attributes).
 
-**Handy examples:** `id` (pair with `<label htmlFor>`), `name` / `form` (forms), `autoFocus`, `tabIndex`, `data-*` / `data-testid`, extra `aria-*` beyond what Slider sets, `style` on the input, etc.
+**Handy examples:** `id` (pair with `<label htmlFor>`), `name` / `form` (forms), `autoFocus`, `tabIndex`, `data-*` / `data-testid`, extra `aria-*` beyond what Slider sets, etc.
 
 Pointer event handlers (`onPointerDown`, `onPointerUp`, `onPointerCancel`) are used internally for drag behavior. If you provide your own handlers, they are composed with Slider’s internal logic.
 
-**Note:** `className` applies to the **outer wrapper**, not the `<input>`, so presets and layout theming work on the whole control. Use CSS variables or a wrapper element if you need to target visuals.
+**Note:** `className` and `style` apply to the **outer wrapper**, not the `<input>`, so presets and layout theming work on the whole control. Use `style` for one-off overrides and `className` for reusable themes.
 
 See [Examples](./examples.md#native-input-props--ref) for code snippets.
 

@@ -68,6 +68,7 @@ const Slider = React.forwardRef<HTMLInputElement, SliderProps>(
       showValue,
       units = "",
       className,
+      style,
       disabled = false,
       "aria-valuetext": ariaValueTextProp,
       ...rest
@@ -136,6 +137,7 @@ const Slider = React.forwardRef<HTMLInputElement, SliderProps>(
           showLabels && "ty-slider-mark-labels-visible",
           className,
         )}
+        style={style}
       >
         <div className="ty-slider-track">
           <div

@@ -55,6 +55,7 @@ export function Example() {
 ## Custom styling
 
 Styling is done via CSS variables applied through `className`.
+For one-off layout overrides (for example width), you can also pass `style` to the slider root.
 
 ```css
 .mySlider {
@@ -67,6 +68,7 @@ Styling is done via CSS variables applied through `className`.
 ```tsx
 <Slider
   className="mySlider"
+  style={{ width: 320 }}
   value={value}
   onChange={setValue}
   min={0}
