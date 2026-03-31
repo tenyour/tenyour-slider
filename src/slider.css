@@ -206,7 +206,7 @@
 /* Responsive tweaks */
 @media (max-width: 767px) {
   .ty-slider-input {
-    --slider-thumb-size: var(--slider-thumb-size, 32px);
+    --slider-thumb-size: var(--slider-thumb-size-mobile, 32px);
   }
 
   .ty-slider-wrapper {

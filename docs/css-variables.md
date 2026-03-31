@@ -24,6 +24,7 @@ The reference below documents the **public variables** you can use.
 | ----------------------- | ------------------------- | ------- |
 | `--slider-track-height` | Height of the track       | `6px`   |
 | `--slider-thumb-size`   | Thumb size (width/height) | `18px`  |
+| `--slider-thumb-size-mobile` | Thumb size on mobile (`max-width: 767px`) | `32px` |
 | `--slider-mark-width`   | Mark/tick width           | `1px`   |
 | `--slider-mark-height`  | Mark/tick height          | `12px`  |
 | `--slider-mark-radius`  | Mark/tick border radius   | `0px`   |
