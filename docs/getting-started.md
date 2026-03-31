@@ -15,6 +15,7 @@ yarn add tenyour-slider
 ```tsx
 import { useState } from "react";
 import { Slider } from "tenyour-slider";
+import "tenyour-slider/styles.css";
 
 export function Example() {
   const [value, setValue] = useState(50);
@@ -33,6 +34,8 @@ export function Example() {
   );
 }
 ```
+
+> Important: import `tenyour-slider/styles.css` once in your app where global styles are loaded.
 
 ## Ref & extra DOM props
 

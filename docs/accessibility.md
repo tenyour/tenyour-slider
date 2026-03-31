@@ -48,6 +48,7 @@ If you want to override the auto-generated announcement, pass your own `aria-val
 ```tsx
 import { useState } from "react";
 import { Slider } from "tenyour-slider";
+import "tenyour-slider/styles.css";
 
 export function DistanceSlider() {
   const [value, setValue] = useState(50);

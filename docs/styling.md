@@ -3,6 +3,11 @@
 ## How styling works
 
 Slider is styled via CSS variables. You apply them through `className`.
+Import the stylesheet once before using `Slider`:
+
+```tsx
+import "tenyour-slider/styles.css";
+```
 
 ## Important: className and style behavior
 

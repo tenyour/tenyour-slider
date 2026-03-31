@@ -1,5 +1,10 @@
 # Examples
 
+```tsx
+import { Slider } from "tenyour-slider";
+import "tenyour-slider/styles.css";
+```
+
 ## Percentage slider
 
 ```tsx

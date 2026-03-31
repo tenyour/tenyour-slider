@@ -4,6 +4,8 @@
 
 `Slider` accepts:
 
+> Reminder: import `tenyour-slider/styles.css` once when using this package.
+
 - All custom `SliderProps` documented below
 - All native `<input type="range">` props (except `value` and `onChange`, which are replaced by Slider's controlled API)
 - A forwarded `ref` to the underlying `<input>`
