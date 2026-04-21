@@ -79,6 +79,14 @@ When the thumb is on a labeled mark, that label can appear in the value readout 
 
 Details: [Props → Marks](./props.md#marks).
 
+## Mobile layout (narrow viewports)
+
+From **`max-width: 767px`**, the thumb uses the larger mobile size ([`--slider-thumb-size-mobile`](./css-variables.md#sizing)).
+
+When **mark labels** are shown and the **value tooltip is allowed** (`showValue` is not `false`), the value reads **above** the track and mark labels read **below** so they do not overlap. Pass **`showValue={false}`** if you only need mark labels and want them to stay **above** the track on small screens (same as desktop).
+
+Related spacing variables: [`--slider-mark-label-below-gap`](./css-variables.md#labels), [`--slider-label-offset`](./css-variables.md#labels).
+
 ## Snapping to marks
 
 Set **`snapToMarks`** so the value jumps to the **nearest mark** while the user drags or uses arrow keys—useful for discrete choices or labeled scales.
