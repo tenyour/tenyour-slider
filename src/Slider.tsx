@@ -135,6 +135,7 @@ const Slider = React.forwardRef<HTMLInputElement, SliderProps>(
           disabled && "ty-slider-disabled",
           showMarks && "ty-slider-marks-visible",
           showLabels && "ty-slider-mark-labels-visible",
+          showValue !== false && "ty-slider-mobile-opposing-labels",
           className,
         )}
         style={style}

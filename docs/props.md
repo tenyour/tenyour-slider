@@ -20,23 +20,22 @@ const [value, setValue] = useState(50)
 
 ### Custom `SliderProps` (complete list)
 
-
-| Prop            | Type                                                 | Default      | Notes                                                                                            |
-| --------------- | ---------------------------------------------------- | ------------ | ------------------------------------------------------------------------------------------------ |
-| `value`         | `number`                                             | *(required)* | Controlled value. Clamped to `min`/`max` internally for rendering.                               |
-| `onChange`      | `(value: number) => void`                            | `undefined`  | Called with the numeric value when user interaction changes it. If omitted, slider is read-only. |
-| `min`           | `number`                                             | `1`          | Minimum slider value.                                                                            |
-| `max`           | `number`                                             | `10`         | Maximum slider value.                                                                            |
-| `step`          | `number`                                             | `1`          | Step size between values.                                                                        |
-| `marks`         | `false | number | number[] | Record<number, string>` | `1`          | Mark configuration.                                                                              |
-| `showEdgeMarks` | `boolean`                                            | `true`       | Show `min` and `max` marks/labels.                                                               |
-| `snapToMarks`   | `boolean`                                            | `false`      | Snap to nearest mark while interacting.                                                          |
-| `markMode`      | `"auto" | "always"`                                  | `"auto"`     | When marks are visible.                                                                          |
-| `markLabelMode` | `"none" | "auto" | "always"`                         | `"none"`     | When mark labels are visible.                                                                    |
-| `showValue`     | `boolean`                                            | `undefined`  | `true`: always show, `false`: always hide, `undefined`: show after first movement.               |
-| `units`         | `string`                                             | `""`         | Unit suffix and aria formatting hint.                                                            |
-| `className`     | `string`                                             | `undefined`  | Applied to the outer slider wrapper (not the `<input>`).                                         |
-| `style`         | `React.CSSProperties`                                | `undefined`  | Applied to the outer slider wrapper. Inline style overrides class-based values when both set the same CSS property. |
+| Prop | Type | Default | Notes |
+| --- | --- | --- | --- |
+| `value` | `number` | *(required)* | Controlled value. Clamped to `min`/`max` internally for rendering. |
+| `onChange` | `(value: number) => void` | `undefined` | Called when the user changes the value. If omitted, slider is read-only. |
+| `min` | `number` | `1` | Minimum slider value. |
+| `max` | `number` | `10` | Maximum slider value. |
+| `step` | `number` | `1` | Step size between values. |
+| `marks` | `false \| number \| number[] \| Record<number, string>` | `1` | Mark configuration; see [Marks & Labels](./marks.md). |
+| `showEdgeMarks` | `boolean` | `true` | Show `min` and `max` marks/labels. |
+| `snapToMarks` | `boolean` | `false` | Snap to nearest mark on each change. |
+| `markMode` | `"auto" \| "always"` | `"auto"` | When tick marks are visible (`auto`: while the thumb is dragged). |
+| `markLabelMode` | `"none" \| "auto" \| "always"` | `"none"` | When text beside ticks is visible; see [Mark visibility](#mark-visibility). |
+| `showValue` | `boolean` | `undefined` | See [Value display](#value-display). On narrow screens, interacts with mark layout when labels are on ([details](./marks.md#mobile-layout-narrow-viewports)). |
+| `units` | `string` | `""` | Unit suffix and aria formatting hint. |
+| `className` | `string` | `undefined` | Applied to the outer slider wrapper (not the `<input>`). |
+| `style` | `React.CSSProperties` | `undefined` | Applied to the outer slider wrapper. Inline `style` wins over conflicting rules from `className`. |
 
 
 ### Native `<input>` props often used with Slider
@@ -107,6 +106,8 @@ Optional. **If you omit it, edge marks at `min` and `max` are shown** (same as `
 - `true`: value tooltip always visible
 - `false`: value tooltip is always hidden
 - `undefined` (default): tooltip becomes visible after the first value change and stays visible for the rest of the session
+
+Narrow screens: see [Marks & Labels → Mobile layout](./marks.md#mobile-layout-narrow-viewports).
 
 ### `units`
 

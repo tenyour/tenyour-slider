@@ -203,7 +203,6 @@
   cursor: grabbing;
 }
 
-/* Responsive tweaks */
 @media (max-width: 767px) {
   .ty-slider-input {
     --slider-thumb-size: var(--slider-thumb-size-mobile, 32px);
@@ -221,6 +220,36 @@
     margin-top: 0.5rem;
     margin-bottom: 0;
     font-weight: var(--slider-value-label-weight-mobile, 300);
+  }
+
+  .ty-slider-mark-label {
+    top: var(--slider-label-offset, -18px);
+    margin-top: 0;
+    transform: translate(-50%, 8px) scale(0.8);
+  }
+
+  .ty-slider-wrapper.ty-slider-mobile-opposing-labels {
+    margin-top: 1.5rem;
+    margin-bottom: 2rem;
+  }
+
+  .ty-slider-wrapper.ty-slider-mobile-opposing-labels .ty-slider-value-display {
+    top: auto;
+    bottom: 100%;
+    margin-top: 0;
+    margin-bottom: 0.5rem;
+  }
+
+  .ty-slider-wrapper.ty-slider-mobile-opposing-labels .ty-slider-mark-label {
+    top: 100%;
+    margin-top: var(--slider-mark-label-below-gap, 0.5rem);
+    /* Hidden state: nudge upward so the open animation mirrors the above-track desktop case. */
+    transform: translate(-50%, -8px) scale(0.8);
+  }
+
+  .ty-slider-wrapper.ty-slider-mobile-opposing-labels.ty-slider-mark-labels-visible
+    .ty-slider-mark-label {
+    transform: translate(-50%, 0) scale(1);
   }
 
   .ty-slider-marks {

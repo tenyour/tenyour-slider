@@ -54,7 +54,8 @@ Use these when you want marks in front of or behind the track.
 | `--slider-value-label-weight-mobile` | Value tooltip font weight on mobile (`max-width: 767px`) | `300` |
 | `--slider-mark-label-weight` | Mark label font weight                                       | `400`                                                    |
 | `--slider-value-unit-size` | Unit suffix font size inside the value tooltip (e.g. `%`, `cm`) | `12px`                                                   |
-| `--slider-label-offset`    | Offset for mark labels above the track                          | `-18px`                                                  |
+| `--slider-label-offset`    | Offset for mark labels **above** the track ([mobile behavior](./marks.md#mobile-layout-narrow-viewports)) | `-18px` |
+| `--slider-mark-label-below-gap` | Gap under the thumb row when mark labels sit below the track on narrow viewports ([details](./marks.md#mobile-layout-narrow-viewports)) | `0.5rem` |
 
 ## Focus
 
